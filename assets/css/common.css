@@ -1,17 +1,51 @@
-/* * これは構造を理解しやすくするための最小限のサンプルスタイルです。
- * 実際のデザインには、詳細なCSSコーディングが必要です。
- */
+/* ========================================
+  モバイルファースト設計
+  ========================================
+  * このCSSはスマホ画面をベースに記述しています
+  * PC対応はメディアクエリで下部に記述
+  * ブレークポイント:
+    - タブレット: 768px以上
+    - PC: 1024px以上
+======================================== */
 
 /* ========================================
   基本設定
 ======================================== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "dnp-shuei-gothic-gin-std", sans-serif;
   margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .mincho {
   font-family: "fot-tsukumin-pr6n", serif;
+}
+
+/* ========================================
+  レイアウトコンテナ
+======================================== */
+/* 画像などのコンテンツ用：最大幅1920px */
+.container-wide {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 16px; /* スマホ: 左右16px */
+}
+
+/* テキストメインのコンテンツ用：最大幅1080px（可読性重視） */
+.container-narrow {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px; /* スマホ: 左右16px */
 }
 
 /* ========================================
@@ -72,4 +106,16 @@ section {
 .approach-item {
   border: 1px solid #ddd;
   padding: 15px;
+}
+
+/* ========================================
+  メディアクエリ（タブレット以上）
+======================================== */
+@media screen and (min-width: 768px) {
+  /* タブレット＆PC用のスタイルをここに追加 */
+  /* コンテナのパディング調整 */
+  .container-wide,
+  .container-narrow {
+    padding: 0 40px; /* PC: 左右40px */
+  }
 }
