@@ -51,13 +51,126 @@ body {
 /* ========================================
   ヘッダー・フッター
 ======================================== */
-header,
-footer {
-  background-color: #f4f4f4;
-  padding: 20px;
+header {
+  background-color: #f5f5f0; /* ベージュ系の背景色 */
+  padding: 0;
+}
+
+.header-container {
+  width: 100%;
+}
+
+/* 上部：アクションアイテム */
+.header-top {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-icon,
+.user-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #8B4513; /* ダークブラウン */
+  cursor: pointer;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-svg,
+.user-svg {
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+.cart-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.register-btn {
+  background-color: #2d5016;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.sp-menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 1px;
+  background-color: black;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* アニメーション用のクラス（JavaScriptで切り替え） */
+.sp-menu-button.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.sp-menu-button.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.sp-menu-button.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* 下部：ブランドロゴ */
+.header-bottom {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-svg {
+  width: 100%;
+}
+
+
+/* 区切り線 */
+.header-divider {
+  height: 1px;
+  background-color: #8B4513; /* ダークブラウン */
+  margin: 0 20px;
 }
 
 footer {
+  background-color: #f4f4f4;
+  padding: 20px;
   text-align: center;
   margin-top: 40px;
 }

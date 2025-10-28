@@ -19,23 +19,28 @@
 <body>
   <header>
     <div class="header-container">
-      <h1 class="logo-pc">
-        <a href="/">HORIGUCHI COFFEE GREEN BEANS STORE</a>
-      </h1>
+      <!-- 上部：アクションアイテム -->
+      <div class="header-top">
+        <div class="header-actions">
+          <button class="register-btn">新規登録</button>
+          <button class="user-icon" aria-label="ユーザー">
+            <img src="assets/img/user.svg" alt="ユーザー" class="user-svg">
+          </button>
+          <button class="cart-icon" aria-label="カート">
+            <img src="assets/img/cart.svg" alt="カート" class="cart-svg">
+          </button>
+          <button class="sp-menu-button" aria-label="メニューを開く">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
 
-      <button class="sp-menu-button" aria-label="メニューを開く">☰</button>
-
-      <nav class="global-nav">
-        <ul>
-          <li><a href="/">TOP</a></li>
-          <li><a href="#lineup">GREEN BEANS LINEUP</a></li>
-          <li><a href="#news">NEWS</a></li>
-          <li><a href="#approaches">APPROACHES</a></li>
-          <li><a href="https://www.horiguchi-coffee.com/" target="_blank">OFFICIAL WEB SITE</a></li>
-          <li><a href="https://www.horiguchi-coffee.com/beans" target="_blank">焙煎豆はこちらから</a></li>
-        </ul>
-      </nav>
-    </div>
+      <!-- 下部：ブランドロゴ -->
+      <div class="header-bottom">
+        <img src="assets/img/logo.svg" alt="HORIGUCHI COFFEE GREEN BEANS STORE" class="logo-svg">
+      </div>
   </header>
 
   <main>
