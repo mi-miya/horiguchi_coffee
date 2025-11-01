@@ -167,11 +167,92 @@ header {
   margin: 0 20px;
 }
 
+/* ========================================
+  フッターコンテンツ（footer内）
+======================================== */
 footer {
-  background-color: #f4f4f4;
-  padding: 20px;
-  text-align: center;
+  padding: 30px 20px;
   margin-top: 40px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 48px;
+}
+
+.footer-links a {
+  font-size: 10px;
+  color: #220000;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  margin: 0;
+  text-align: left;
+}
+
+footer .copyright small {
+  font-size: 12px;
+}
+
+
+.footer-logo {
+  margin-bottom: 30px;
+  width: 78%;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.footer-concept-sp p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-nav-left,
+.footer-nav-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav-left a,
+.footer-nav-right a {
+  font-size: 16px;
+  color: #220000;
+  text-decoration: none;
+}
+
+.footer-nav-right a {
+  text-decoration: underline;
+}
+
+.footer-nav-left a:hover,
+.footer-nav-right a:hover {
+  text-decoration: underline;
+}
+
+footer hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #220000;
 }
 
 /* ========================================
@@ -497,9 +578,4 @@ nav ul {
 ======================================== */
 @media screen and (min-width: 768px) {
   /* タブレット＆PC用のスタイルをここに追加 */
-  /* コンテナのパディング調整 */
-  .container-wide,
-  .container-narrow {
-    padding: 0 40px; /* PC: 左右40px */
-  }
 }
