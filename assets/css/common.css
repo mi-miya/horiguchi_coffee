@@ -298,7 +298,6 @@ nav ul {
 }
 
 .approach-item:not(:last-child) {
-  border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
 }
 
@@ -392,6 +391,105 @@ nav ul {
 
 .news-item:nth-child(2) p {
   text-decoration: underline;
+}
+
+/* ========================================
+  APPROACHESセクション
+======================================== */
+.approaches {
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
+}
+
+.approaches h2 {
+  padding: 20px 0 10px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: 2px solid #272727;
+}
+
+.approach-intro {
+  width: 92%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.approach-intro p {
+  margin: 0 0 1em 0;
+  line-height: 1.8;
+}
+
+/* 番号付き段落（1. と 2.）にアンダーライン */
+.approach-intro p:nth-child(2),
+.approach-intro p:nth-child(3) {
+  text-decoration: underline;
+}
+
+.approach-menu {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.approach-menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 4%;
+  border-bottom: 1px solid #000;
+}
+
+.approach-menu li:last-child {
+  border-bottom: none;
+}
+
+.approach-menu span {
+  font-size: 16px;
+  color: #220000;
+}
+
+.approach-menu .arrow {
+  color: #220000;
+  font-size: 18px;
+}
+
+/* ========================================
+  APPROACHアイテム
+======================================== */
+.approach-container {
+  width: 92%;
+  margin: 0 auto;
+}
+
+.approach-item {
+  margin-bottom: 30px;
+}
+
+.approach-item h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 20px 0 15px 0;
+}
+
+.approach-item > p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 0 0 15px 0;
+}
+
+.approach-detail {
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.approach-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px 0;
 }
 
 /* ========================================
