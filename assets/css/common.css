@@ -679,8 +679,55 @@ nav ul {
 }
 
 /* ========================================
+  ページトップボタン
+======================================== */
+.page-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffffdc;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+  z-index: 99;
+}
+
+.page-top-btn:hover {
+  transform: translateY(-2px);
+}
+
+.page-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-top-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ========================================
   メディアクエリ（タブレット以上）
 ======================================== */
 @media screen and (min-width: 768px) {
   /* タブレット＆PC用のスタイルをここに追加 */
+  .page-top-btn {
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .page-top-btn img {
+    width: 24px;
+    height: 24px;
+  }
 }

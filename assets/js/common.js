@@ -56,4 +56,57 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // ページトップボタンの機能
+  const pageTopBtn = document.getElementById('page-top-btn');
+  const footer = document.querySelector('footer');
+
+  // スムーズスクロールの設定（CSS側にも設定）
+  if (pageTopBtn) {
+    // CSSでのスムーズスクロール設定
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+    // ページトップボタンのクリックイベント
+    pageTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // スクロール位置を監視してボタンの表示/非表示を制御
+    function togglePageTopButton() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // スクロール位置がゼロの場合は非表示
+      if (scrollTop === 0) {
+        pageTopBtn.classList.remove('active');
+        return;
+      }
+
+      // footerの位置を取得
+      if (footer) {
+        const footerTop = footer.offsetTop;
+        const footerHeight = footer.offsetHeight;
+        const scrollBottom = scrollTop + windowHeight;
+
+        // footerの大部分が見えるようになってから非表示（footerの高さの80%が見えるまで表示）
+        if (scrollBottom >= footerTop + footerHeight * 0.8) {
+          pageTopBtn.classList.remove('active');
+          return;
+        }
+      }
+
+      // 通常のスクロール中は表示
+      pageTopBtn.classList.add('active');
+    }
+
+    // スクロールイベントでボタンの表示/非表示を制御
+    window.addEventListener('scroll', togglePageTopButton);
+
+    // 初回読み込み時にもチェック
+    togglePageTopButton();
+  }
 });
