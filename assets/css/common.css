@@ -6,6 +6,8 @@
   * ブレークポイント:
     - タブレット: 768px以上
     - PC: 1024px以上
+  * 最大幅：1920px
+    * テキストが主の箇所は、読みやすさを担保するため 1080px とする
 ======================================== */
 
 /* ========================================
@@ -35,6 +37,16 @@ body {
 a {
   color: #220000;
   border: none;
+}
+
+/* スマホ専用表示クラス */
+.sp-only {
+  display: block;
+}
+
+/* PC専用表示クラス */
+.pc-only {
+  display: none;
 }
 
 /* ========================================
@@ -266,6 +278,9 @@ footer {
   border-top: 1px solid #220000;
 }
 
+.footer-container {
+}
+
 footer hr {
   margin: 30px 0;
   border-top: 1px solid #220000;
@@ -280,6 +295,9 @@ footer .copyright small {
   font-size: 10px;
 }
 
+.footer-logo-nav {
+}
+
 .footer-logo {
   margin-bottom: 18px;
   width: 78%;
@@ -288,6 +306,10 @@ footer .copyright small {
 .footer-logo img {
   width: 100%;
   height: auto;
+}
+
+.footer-logo-nav-links {
+  display: none;
 }
 
 .footer-concept-sp p {
@@ -324,6 +346,9 @@ footer .copyright small {
 .footer-nav-left a:hover,
 .footer-nav-right a:hover {
   text-decoration: underline;
+}
+
+.footer-bottom {
 }
 
 .footer-links {
@@ -367,7 +392,7 @@ nav ul {
   padding: 20px 10px 30px;
 }
 
-.hero-content .hero-content-title {
+.hero-content-title {
   font-family: "fot-tsukumin-pr6n", serif;
   font-size: 15.5px;
   line-height: 2.2;
@@ -379,6 +404,7 @@ nav ul {
   position: relative;
   display: flex;
   height: 580px;
+  width: 100%;
   margin: 0 auto 40px;
 }
 
@@ -616,6 +642,7 @@ nav ul {
 }
 
 .approach-menu-link {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -630,7 +657,20 @@ nav ul {
   font-size: 19px;
 }
 
+.approach-title {
+  color: #220000;
+  font-size: 19px;
+}
+
+.approach-description {
+  display: none;
+}
+
 .approach-menu .arrow {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
   width: 22px;
   height: 22px;
   display: inline-block;
@@ -662,6 +702,9 @@ nav ul {
   letter-spacing: 0.02em;
 }
 
+.approach-content {
+}
+
 .approach-detail {
   font-size: 17px;
   margin-bottom: 24px;
@@ -672,6 +715,18 @@ nav ul {
   width: 100%;
   height: auto;
   display: block;
+  margin: 15px 0;
+}
+
+.approach-images {
+}
+
+.approach-images-2col,
+.approach-images-1col {
+}
+
+.approach-images-2col .approach-image,
+.approach-images-1col .approach-image {
   margin: 15px 0;
 }
 
@@ -726,5 +781,436 @@ nav ul {
   .page-top-btn img {
     width: 24px;
     height: 24px;
+  }
+}
+
+/* ========================================
+  メディアクエリ（PC以上）
+======================================== */
+@media screen and (min-width: 1024px) {
+  /* ヘッダーを横並びに */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 24px 3px;
+  }
+
+  /* 上部：アクションアイテムを右側に */
+  .header-top {
+    padding: 0;
+    order: 2;
+  }
+
+  .header-actions {
+    gap: 16px;
+  }
+
+  .register-btn {
+    font-size: 10px;
+    padding: 2px 12px;
+    border-radius: 20px;
+  }
+
+  .cart-icon,
+  .user-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cart-svg,
+  .user-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cart-svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .sp-menu-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hamburger-line {
+    width: 32px;
+  }
+
+  /* 下部：ブランドロゴを左側に */
+  .header-bottom {
+    padding: 0;
+    order: 1;
+    flex-shrink: 0;
+    min-width: 200px;
+  }
+
+  .header-bottom a {
+    width: auto;
+    display: block;
+    line-height: 0;
+  }
+
+  .logo-svg {
+    width: 500px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* ヒーローセクション */
+  .hero-content {
+    max-width: 888px;
+    margin: 0 auto 98px;
+    padding: 0;
+  }
+
+  .hero-content-title {
+    font-size: 20px;
+    line-height: 2.3;
+    margin-bottom: 0;
+  }
+
+  .hero-english-text {
+    font-size: 0.85em;
+  }
+
+  /* conceptセクション */
+  .hero {
+    padding: 94px 0 122px;
+  }
+
+  .hero-images {
+    width: 100%;
+    height: auto;
+    margin-bottom: 110px;
+  }
+
+  .hero-images-container {
+  }
+
+  .hero-image-left {
+  }
+
+  .hero-image-right {
+  }
+
+  .hero-logo-overlay {
+  }
+
+  .hero-logo {
+    width: 360px;
+  }
+
+  .hero-text {
+    width: 71%;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .hero-text p {
+    line-height: 2.4;
+  }
+
+  /* lineupセクション */
+  .lineup {
+  }
+
+  .lineup h2 {
+    font-size: 1.55em;
+    padding: 56px 0 8px;
+    letter-spacing: 0.12em;
+  }
+
+  .lineup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .lineup-item {
+    width: 100%;
+    border-bottom: 1px solid #220000;
+    padding: 26px 0 52px;
+    margin: 0;
+  }
+
+  .lineup-item:nth-child(2n) {
+    border-left: 1px solid #220000;
+  }
+
+  .lineup-item-content {
+  }
+
+  .item-image {
+    margin-bottom: 20px;
+  }
+
+  .item-text {
+    padding: 0 20px;
+  }
+
+  .producing-area {
+  }
+
+  .item-name-row {
+  }
+
+  .item-name {
+    font-size: 21px;
+  }
+
+  .btn-detail {
+  }
+
+  /* newsセクション */
+  .news {
+  }
+
+  .news-content {
+    width: 66%;
+  }
+
+  .news-content h2 {
+    margin-bottom: 1.24em;
+  }
+
+  .news-list {
+  }
+
+  .news-item {
+  }
+
+  .news-item time {
+    margin-right: 32px;
+  }
+
+  /* approachesセクション */
+  .approaches {
+  }
+
+  .approaches h2 {
+    font-size: 1.55em;
+    padding: 56px 0 8px;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.8em;
+  }
+
+  .approach-intro {
+    width: 66%;
+    padding-bottom: 2.2em;
+  }
+
+  .approach-intro p {
+    margin-bottom: 2.2em;
+    line-height: 2.5;
+  }
+
+  .approach-intro_underline {
+  }
+
+  .approach-menu {
+    width: 77%;
+    margin: 0 auto 70px;
+  }
+
+  .approach-menu li {
+  }
+
+  .approach-menu li:last-child {
+    border-bottom: 1px solid #220000;
+  }
+
+  .approach-menu-link {
+    position: relative;
+    padding: 43px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .approach-title {
+    font-size: 21px;
+    width: 27%;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .approach-description {
+    width: 61%;
+    flex-shrink: 0;
+    display: block;
+    color: #220000;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-right: 14.5%;
+  }
+
+  .pc-only {
+    display: block;
+  }
+
+  .approach-menu span {
+  }
+
+  .approach-menu .arrow {
+    position: absolute;
+    right: 2.6%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .approach-item-image-full {
+    margin-bottom: 44px;
+  }
+
+  .approach-container {
+    max-width: 1080px;
+    width: 89%;
+    margin: 0 auto;
+    padding-left: 6.2%;
+  }
+
+  .approach-item {
+    margin-bottom: 20px;
+  }
+
+  .approach-item h3 {
+    font-size: 37px;
+    margin-bottom: 46px;
+  }
+
+  .approach-content {
+    padding-left: 13%;
+  }
+
+  .approach-detail {
+    width: 100%;
+    line-height: 1.95;
+    margin-bottom: 42px;
+  }
+
+  .approach-images {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+  }
+
+  .approach-images-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+  }
+
+  .approach-images-1col {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+
+  .approach-images-2col .approach-image,
+  .approach-images-1col .approach-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .approach-images-1col .approach-image {
+    max-width: 100%;
+  }
+
+  .approach-image {
+  }
+
+  /* スマホ専用表示クラス：PCでは非表示 */
+  .sp-only {
+    display: none;
+  }
+
+  /* ========================================
+    Footer（パソコン用）
+  ======================================== */
+  footer {
+    margin-top: 70px;
+    padding: 50px 0 40px;
+  }
+
+  .footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .footer-logo-nav {
+    display: flex;
+    align-items: top;
+    margin-bottom: 50px;
+  }
+
+  .footer-logo {
+    width: 460px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .footer-logo-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: auto;
+  }
+
+  .footer-logo-nav-links a {
+    font-size: 18px;
+    color: #220000;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .footer-logo-nav-links a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-concept-sp {
+    margin-bottom: 44px;
+  }
+
+  .footer-concept-sp p {
+    line-height: 2.3;
+    font-size: 13px;
+  }
+
+  .footer-nav {
+    margin-bottom: 74px;
+  }
+
+  .footer-nav-right {
+    gap: 20px;
+  }
+
+  .footer-nav-right a {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-links {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .footer-links a {
+  }
+
+  footer .copyright {
+  }
+
+  footer .copyright small {
   }
 }
