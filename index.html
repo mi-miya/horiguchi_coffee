@@ -40,12 +40,12 @@
 
       <!-- 下部：ブランドロゴ -->
       <div class="header-bottom">
-        <img src="assets/img/logo.svg" alt="HORIGUCHI COFFEE GREEN BEANS STORE" class="logo-svg">
+        <a href="#concept"><img src="assets/img/logo.svg" alt="HORIGUCHI COFFEE GREEN BEANS STORE" class="logo-svg"></a>
       </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section id="concept" class="hero">
       <div class="hero-content">
         <h2>
           わたしたちはスペシャルティコーヒーに相応しい品質の<br>
@@ -76,8 +76,6 @@
         </div>
     </section>
 
-    <hr>
-
     <section id="lineup" class="lineup">
       <h2>GREEN BEANS LINEUP</h2>
       <div class="lineup-grid">
@@ -88,7 +86,7 @@
               <p class="producing-area">producing area / brand name</p>
               <div class="item-name-row">
                 <p class="item-name">グァテマラ/サンタバルバラ</p>
-                <a href="#" class="btn-detail">詳細/購入</a>
+                <a href="#" class="btn-detail">詳細／購入</a>
               </div>
             </div>
           </div>
@@ -101,7 +99,7 @@
               <p class="producing-area">producing area / brand name</p>
               <div class="item-name-row">
                 <p class="item-name">コスタリカ/サンタバルバラ</p>
-                <a href="#" class="btn-detail">詳細/購入</a>
+                <a href="#" class="btn-detail">詳細／購入</a>
               </div>
             </div>
           </div>
@@ -114,7 +112,7 @@
               <p class="producing-area">producing area / brand name</p>
               <div class="item-name-row">
                 <p class="item-name">ペルー/サンタバルバラ</p>
-                <a href="#" class="btn-detail">詳細/購入</a>
+                <a href="#" class="btn-detail">詳細／購入</a>
               </div>
             </div>
           </div>
@@ -127,7 +125,7 @@
               <p class="producing-area">producing area / brand name</p>
               <div class="item-name-row">
                 <p class="item-name">インドネシア/サンタバルバラ</p>
-                <a href="#" class="btn-detail">詳細/購入</a>
+                <a href="#" class="btn-detail">詳細／購入</a>
               </div>
             </div>
           </div>
@@ -140,7 +138,7 @@
               <p class="producing-area">producing area / brand name</p>
               <div class="item-name-row">
                 <p class="item-name">エチオピア/サンタバルバラ</p>
-                <a href="#" class="btn-detail">詳細/購入</a>
+                <a href="#" class="btn-detail">詳細／購入</a>
               </div>
             </div>
           </div>
@@ -160,8 +158,6 @@
         </article>
       </div>
     </section>
-
-    <hr>
 
     <section id="news" class="news">
       <div class="news-content">
@@ -183,37 +179,31 @@
       </div>
     </section>
 
-    <hr>
-
     <section id="approaches" class="approaches">
       <h2>APPROACHES</h2>
       <div class="approach-intro">
         <p>スペシャルティらしいおいしさは2つの基本でできています。</p>
-        <br>
-        <p>1. 変な味がしないこと。</p>
-        <p>2. 産地に由来する特徴的な風味を楽しめること。</p>
-        <br>
-        <p>2つの基本を支えるのは「生豆の品質」です。</p>
-        <p>これに向けて私達が徹底している取り組みを項目ごとにご紹介します。</p>
+        <p class="approach-intro_underline">1. 変な味がしないこと。<br>2. 産地に由来する特徴的な風味を楽しめること。</p>
+        <p>2つの基本を支えるのは「生豆の品質」です。<br>これに向けて私達が徹底している取り組みを項目ごとにご紹介します。</p>
       </div>
 
-      <ul class="approach-menu">
-        <li><span>輸送・保管</span><span class="arrow">→</span></li>
-        <li><span>品質確認</span><span class="arrow">→</span></li>
-        <li><span>選別</span><span class="arrow">→</span></li>
-        <li><span>スケジュール管理</span><span class="arrow">→</span></li>
+      <ul class="approach-menu mincho">
+        <li><a href="#transportation" class="approach-menu-link"><span>輸送・保管</span><img src="assets/img/arrow.svg" alt="arrow" class="arrow"></a></li>
+        <li><a href="#quality" class="approach-menu-link"><span>品質確認</span><img src="assets/img/arrow.svg" alt="arrow" class="arrow"></a></li>
+        <li><a href="#sorting" class="approach-menu-link"><span>選別</span><img src="assets/img/arrow.svg" alt="arrow" class="arrow"></a></li>
+        <li><a href="#schedule" class="approach-menu-link"><span>スケジュール管理</span><img src="assets/img/arrow.svg" alt="arrow" class="arrow"></a></li>
       </ul>
 
+      <img src="assets/img/サンプルのテイスティング_2.jpg" alt="輸送・保管" class="approach-item-image-full">
       <div class="approach-container">
-        <article class="approach-item">
-          <img src="assets/img/サンプルのテイスティング_2.jpg" alt="輸送・保管" class="item-image">
+        <article id="transportation" class="approach-item">
           <h3 class="mincho">輸送・保管 /<br>Transportation and Storage</h3>
-          <p>仕上がった生豆の輸送・保管で、できるだけ良い状態を維持することに注力している。</p>
           <p class="approach-detail">
             「スペシャルティコーヒーにおいて優れた風味を生み出すための基礎になるのが生豆の品質です。<br>
             これをいかに高い状態に維持・磨き上げられるかが、カップの品質を最終的にどこまで高められるかを左右します。<br><br>
             生豆を扱う会社がいかにその商品に付加価値を与えるか。<br>
             産地を開拓しニーズに応える素材を調達する、生産者の背景ストーリーを語る、だけでは不十分。<br>
+            実質的なお客様のおいしさに繋がる価値も生み出すべきです。それが「品質評価における精度の高さ」と「徹底した生豆選別による厳選」。堀口珈琲の得意とするところであり、他社が取り組みきれていない部分（あるいは興味がない部分）。<br><br>
             実質的なお客様のおいしさに繋がる価値も生み出すべきです。それが「品質評価における精度の高さ」と「徹底した生豆選別による厳選」。堀口珈琲の得意とするところであり、他社が取り組みきれていない部分（あるいは興味がない部分）。」
           </p>
           <img src="assets/img/202111011142355885.jpg" alt="" class="approach-image">
@@ -221,9 +211,8 @@
           <img src="assets/img/9w983kzy9cqdgi7epe5zj2rhtqgv2q6p.jpg" alt="" class="approach-image">
         </article>
 
-        <article class="approach-item">
+        <article id="quality" class="approach-item">
           <h3 class="mincho">品質確認 /<br>Quality Verification</h3>
-          <p>到着した生豆を検査し、品質に問題がないか、どういった状態にあるか確認している。</p>
           <p class="approach-detail">
             「スペシャルティコーヒーにおいて優れた風味を生み出すための基礎になるのが生豆の品質です。<br>
             これをいかに高い状態に維持・磨き上げられるかが、カップの品質を最終的にどこまで高められるかを左右します。<br><br>
@@ -236,7 +225,7 @@
           <img src="assets/img/サンプルのテイスティング_1.jpg" alt="" class="approach-image">
         </article>
 
-        <article class="approach-item">
+        <article id="sorting" class="approach-item">
           <h3 class="mincho">選別 /<br>Bean Sorting</h3>
           <p class="approach-detail">
             「スペシャルティコーヒーにおいて優れた風味を生み出すための基礎になるのが生豆の品質です。<br>
@@ -251,7 +240,7 @@
           <img src="assets/img/生豆の選別結果.jpg" alt="" class="approach-image">
         </article>
 
-        <article class="approach-item">
+        <article id="schedule" class="approach-item">
           <h3 class="mincho">スケジュール管理 /<br>Schedule Management</h3>
           <p class="approach-detail">
             「スペシャルティコーヒーにおいて優れた風味を生み出すための基礎になるのが生豆の品質です。<br>
@@ -270,7 +259,7 @@
 
   <footer>
     <div class="footer-logo">
-      <a href="/"><img src="assets/img/logo.svg" alt="HORIGUCHI COFFEE GREEN BEANS STORE"></a>
+      <a href="#concept"><img src="assets/img/logo.svg" alt="HORIGUCHI COFFEE GREEN BEANS STORE"></a>
     </div>
 
     <div class="footer-concept-sp mincho">

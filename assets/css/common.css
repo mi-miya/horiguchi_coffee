@@ -31,6 +31,12 @@ body {
   font-family: "fot-tsukumin-pr6n", serif;
 }
 
+/* 基本のリンクスタイル */
+a {
+  color: #220000;
+  border: none;
+}
+
 /* ========================================
   レイアウトコンテナ
 ======================================== */
@@ -51,11 +57,11 @@ body {
 }
 
 /* ========================================
-  ヘッダー・フッター
+  ヘッダー
 ======================================== */
 header {
   background-color: #f5f5f0; /* ベージュ系の背景色 */
-  padding: 0;
+  border-bottom: 1px solid #220000;
 }
 
 .header-container {
@@ -64,7 +70,7 @@ header {
 
 /* 上部：アクションアイテム */
 .header-top {
-  padding: 16px 20px;
+  padding: 12px 20px 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -73,13 +79,12 @@ header {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
 }
 
 .cart-icon,
 .user-icon {
   background: none;
-  border: none;
   font-size: 20px;
   cursor: pointer;
   padding: 6px;
@@ -95,29 +100,29 @@ header {
   width: 20px;
   height: 20px;
 }
+
 .cart-svg {
   width: 22px;
   height: 22px;
 }
 
 .register-btn {
-  background-color: #2d5016;
-  border: none;
+  background-color: #1e571c;
   border-radius: 25px;
   padding: 4px 10px;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 9px;
+  color: white;
   cursor: pointer;
   letter-spacing: 0.5px;
+  font-weight: 300;
 }
 
 .sp-menu-button {
   background: none;
-  border: none;
   cursor: pointer;
   padding: 6px;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,7 +155,7 @@ header {
 
 /* 下部：ブランドロゴ */
 .header-bottom {
-  padding: 20px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
 }
@@ -158,7 +163,6 @@ header {
 .logo-svg {
   width: 100%;
 }
-
 
 /* 区切り線 */
 .header-divider {
@@ -168,29 +172,17 @@ header {
 }
 
 /* ========================================
-  フッターコンテンツ（footer内）
+  フッター
 ======================================== */
 footer {
-  padding: 30px 20px;
+  padding: 40px 24px 20px;
   margin-top: 40px;
+  border-top: 1px solid #220000;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  margin-bottom: 48px;
-}
-
-.footer-links a {
-  font-size: 10px;
-  color: #220000;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
+footer hr {
+  margin: 30px 0;
+  border-top: 1px solid #220000;
 }
 
 footer .copyright {
@@ -199,12 +191,11 @@ footer .copyright {
 }
 
 footer .copyright small {
-  font-size: 12px;
+  font-size: 10px;
 }
 
-
 .footer-logo {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   width: 78%;
 }
 
@@ -214,7 +205,7 @@ footer .copyright small {
 }
 
 .footer-concept-sp p {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.8;
   margin: 0 0 10px 0;
   font-weight: 600;
@@ -235,7 +226,7 @@ footer .copyright small {
 
 .footer-nav-left a,
 .footer-nav-right a {
-  font-size: 16px;
+  font-size: 14px;
   color: #220000;
   text-decoration: none;
 }
@@ -249,10 +240,22 @@ footer .copyright small {
   text-decoration: underline;
 }
 
-footer hr {
-  margin: 30px 0;
-  border: none;
-  border-top: 1px solid #220000;
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  margin-bottom: 48px;
+}
+
+.footer-links a {
+  font-size: 9px;
+  color: #220000;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 /* ========================================
@@ -269,7 +272,7 @@ nav ul {
   ヒーローセクション
 ======================================== */
 .hero {
-  width: 92%;
+  width: 94%;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -280,7 +283,7 @@ nav ul {
 
 .hero-content h2 {
   font-family: "fot-tsukumin-pr6n", serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
   margin-bottom: 14px;
 }
@@ -288,8 +291,8 @@ nav ul {
 .hero-images {
   position: relative;
   display: flex;
-  height: 500px;
-  margin: 0 auto 20px;
+  height: 580px;
+  margin: 0 auto 40px;
 }
 
 .hero-images-container {
@@ -297,6 +300,7 @@ nav ul {
   display: flex;
   width: 100%;
   height: 100%;
+  margin-bottom: 20px;
 }
 
 .hero-images-container::after {
@@ -306,8 +310,8 @@ nav ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
   z-index: 5;
+  background-color: #0d180dbd;
 }
 
 .hero-image-left,
@@ -332,22 +336,31 @@ nav ul {
 }
 
 .hero-logo {
-  width: 250px;
+  width: 230px;
   height: auto;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .hero-text {
+  padding: 0 0.5em;
+}
+
+.hero-text p {
+  line-height: 2;
+  font-size: 17px;
+  letter-spacing: 0.05em;
 }
 
 /* ========================================
   ラインナップセクション
 ======================================== */
 .lineup h2 {
-  padding: 20px 0 10px;
+  padding: 40px 0 10px;
+  font-size: 1.2em;
   font-weight: 400;
   text-align: center;
-  border-bottom: 2px solid #272727;
+  border-top: 2px solid #220000;
+  border-bottom: 2px solid #220000;
 }
 
 /* ========================================
@@ -356,6 +369,7 @@ nav ul {
 .lineup-grid {
   display: flex;
   flex-wrap: wrap;
+  border-bottom: 1px solid #220000;
 }
 
 /* ========================================
@@ -364,22 +378,17 @@ nav ul {
 .lineup-item {
   width: 100%;
   margin-bottom: 10px;
-  padding: 20px 0;
+  padding: 10px 0 52px;
+  border-bottom: 1px solid #220000;
+}
+
+.lineup-item:last-child {
+  border-bottom: none;
 }
 
 .lineup-item-content {
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
-}
-
-/* 最後の要素以外にborder-bottomを設定 */
-.lineup-item:not(:last-child) {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 20px;
-}
-
-.approach-item:not(:last-child) {
-  padding-bottom: 20px;
 }
 
 /* ========================================
@@ -389,7 +398,6 @@ nav ul {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 4px;
   margin-bottom: 15px;
   display: block;
 }
@@ -420,8 +428,8 @@ nav ul {
 }
 
 .btn-detail {
-  font-size: 0.8em;
-  padding: 2px 4px;
+  font-size: 0.7em;
+  padding: 2px 6px;
   text-decoration: none;
   border-bottom: 1px solid #252525;
   padding-bottom: 1px;
@@ -435,15 +443,16 @@ nav ul {
 }
 
 .news-content {
-  width: 92%;
+  width: 82%;
   margin: 0 auto;
   padding: 20px 0 10px;
 }
 
 .news-content > h2 {
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 400;
   margin-bottom: 1em;
+  letter-spacing: 0.08em;
 }
 
 .news-list {
@@ -460,49 +469,41 @@ nav ul {
 }
 
 .news-item time {
-  font-size: 14px;
+  font-size: 15px;
   margin-right: 16px;
   flex-shrink: 0;
 }
 
 .news-item p {
-  font-size: 14px;
+  font-size: 15px;
   margin: 0;
-}
-
-.news-item:nth-child(2) p {
-  text-decoration: underline;
 }
 
 /* ========================================
   APPROACHESセクション
 ======================================== */
-.approaches {
-  padding: 20px 0;
-  border-bottom: 1px solid #000;
-}
-
 .approaches h2 {
-  padding: 20px 0 10px;
+  padding: 40px 0 10px;
+  font-size: 1.2em;
   font-weight: 400;
   text-align: center;
-  border-bottom: 2px solid #272727;
+  border-top: 2px solid #220000;
+  border-bottom: 2px solid #220000;
 }
 
 .approach-intro {
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .approach-intro p {
-  margin: 0 0 1em 0;
+  margin: 0 0 2em 0;
   line-height: 1.8;
+  font-size: 17px;
 }
 
-/* 番号付き段落（1. と 2.）にアンダーライン */
-.approach-intro p:nth-child(2),
-.approach-intro p:nth-child(3) {
+.approach-intro_underline {
   text-decoration: underline;
 }
 
@@ -517,53 +518,70 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 4%;
+  padding: 0;
   border-bottom: 1px solid #000;
+  font-weight: bold;
+}
+
+.approach-menu {
+  border-top: 1px solid #000;
 }
 
 .approach-menu li:last-child {
   border-bottom: none;
 }
 
+.approach-menu-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 6%;
+  text-decoration: none;
+  color: inherit;
+}
+
 .approach-menu span {
-  font-size: 16px;
   color: #220000;
+  font-size: 19px;
 }
 
 .approach-menu .arrow {
-  color: #220000;
-  font-size: 18px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
 }
 
 /* ========================================
   APPROACHアイテム
 ======================================== */
+.approach-item-image-full {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .approach-container {
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .approach-item {
-  margin-bottom: 30px;
+  padding: 30px 0;
 }
 
 .approach-item h3 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 1.4;
-  margin: 20px 0 15px 0;
-}
-
-.approach-item > p {
-  font-size: 20px;
-  line-height: 1.8;
-  margin: 0 0 15px 0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
 }
 
 .approach-detail {
-  font-size: 16px;
+  font-size: 17px;
+  margin-bottom: 24px;
   line-height: 1.8;
-  margin: 0;
 }
 
 .approach-image {
