@@ -1,0 +1,14 @@
+/* ========================================
+  商品詳細ページ（item.html）固有のCSS
+======================================== */
+.__breadcrumb {
+  display: none;
+}
+
+.__block.__block--recommend {
+  display: none !important;
+}
+
+.__information {
+  display: flex;
+}
