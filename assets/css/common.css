@@ -116,6 +116,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .cart-svg,
@@ -138,6 +140,8 @@ a {
   cursor: pointer;
   letter-spacing: 0.5px;
   font-weight: 300;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .sp-menu-button {

@@ -39,7 +39,6 @@
 
 .__main {
   width: 100%;
-  background-color: #ffffff;
   border: none;
   overflow: hidden;
 }
@@ -234,7 +233,6 @@
 .__set tbody tr {
   display: flex;
   flex-direction: column;
-  background-color: #f5f5f0;
   border-radius: 8px;
   padding: 24px 20px;
   border: none;
@@ -244,7 +242,6 @@
 .__set tbody td {
   padding: 20px 0;
   border: none;
-  border-top: 1px solid #e5e5e0;
   background-color: transparent;
   width: 100%;
   box-sizing: border-box;
@@ -667,7 +664,6 @@
 }
 
 .features-tab-button.active {
-  background-color: #f5f5f0;
   font-weight: 600;
 }
 
@@ -919,7 +915,6 @@
   }
 
   .features-tab-button.active {
-    background-color: #f5f5f0;
     font-weight: 600;
     text-decoration: underline;
     margin-bottom: -1px;

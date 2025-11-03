@@ -176,62 +176,11 @@
 }
 
 /* ========================================
-  NEWSセクション
-======================================== */
-.news {
-  padding: 20px 0;
-}
-
-.news-content {
-  width: 82%;
-  margin: 0 auto;
-  padding: 20px 0 10px;
-}
-
-.news-content > h2 {
-  font-size: 0.9em;
-  font-weight: 400;
-  margin-bottom: 1em;
-  letter-spacing: 0.08em;
-}
-
-.news-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.news-item {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.news-item a {
-  width: 100%;
-  display: flex;
-  align-items: top;
-  font-size: 15px;
-  margin: 0;
-  color: #220000;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.news-item time {
-  font-size: 15px;
-  margin-right: 16px;
-  flex-shrink: 0;
-}
-
-.news-item a:hover {
-  opacity: 0.6;
-}
-
-/* ========================================
   新しいNewsセクション（既存と同じスタイル）
 ======================================== */
 .__block--news {
   padding: 20px 0;
+  font-size: 15px !important;
 }
 
 .__block--news .__heading.c-heading-main,
@@ -271,23 +220,25 @@
   width: 100%;
   display: flex;
   align-items: top;
-  font-size: 15px;
+  font-size: 15px !important;
   margin: 0;
-  color: #220000;
+  color: #220000 !important;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
 .__block--news .__date {
-  font-size: 15px;
+  font-size: 15px !important;
   margin-right: 16px;
   flex-shrink: 0;
+  line-height: 1.6;
 }
 
 .__block--news .__title {
   display: flex;
   flex-direction: column;
   flex: 1;
+  font-size: 15px !important;
 }
 
 .__block--news .__label {
@@ -296,6 +247,8 @@
 
 .__block--news .__subject {
   display: block;
+  font-size: 15px !important;
+  line-height: 1.6;
 }
 
 .__block--news .__body > ul > li > a:hover {
@@ -578,30 +531,6 @@
   .btn-detail {
   }
 
-  /* newsセクション */
-  .news {
-  }
-
-  .news-content {
-    width: 66%;
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-
-  .news-content h2 {
-    margin-bottom: 1.24em;
-  }
-
-  .news-list {
-  }
-
-  .news-item {
-  }
-
-  .news-item time {
-    margin-right: 32px;
-  }
-
   /* 新しいNewsセクション（PC版） */
   .__block--news .__heading.c-heading-main,
   .__block--news .__heading.__heading--default {
@@ -621,8 +550,21 @@
     margin: 0 auto;
   }
 
+  .__block--news .__body > ul > li > a {
+    font-size: 15px !important;
+  }
+
   .__block--news .__date {
     margin-right: 32px;
+    font-size: 15px !important;
+  }
+
+  .__block--news .__title {
+    font-size: 15px !important;
+  }
+
+  .__block--news .__subject {
+    font-size: 15px !important;
   }
 
   /* approachesセクション */
