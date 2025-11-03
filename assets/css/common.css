@@ -513,6 +513,7 @@ nav ul {
 .lineup-item-content {
   width: 90%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 /* ========================================
@@ -524,6 +525,11 @@ nav ul {
   object-fit: cover;
   margin-bottom: 24px;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.item-image:hover {
+  transform: scale(1.05);
 }
 
 /* ========================================
@@ -584,9 +590,18 @@ nav ul {
 
 .news-item {
   width: 100%;
-  display: flex;
-  align-items: center;
   margin-bottom: 15px;
+}
+
+.news-item a {
+  width: 100%;
+  display: flex;
+  align-items: top;
+  font-size: 15px;
+  margin: 0;
+  color: #220000;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .news-item time {
@@ -595,9 +610,8 @@ nav ul {
   flex-shrink: 0;
 }
 
-.news-item p {
-  font-size: 15px;
-  margin: 0;
+.news-item a:hover {
+  opacity: 0.6;
 }
 
 /* ========================================
@@ -661,6 +675,12 @@ nav ul {
   padding: 15px 6%;
   text-decoration: none;
   color: inherit;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.approach-menu-link:hover {
+  background-color: rgba(34, 0, 0, 0.05);
 }
 
 .approach-menu span {
@@ -785,8 +805,8 @@ nav ul {
   .page-top-btn {
     bottom: 30px;
     right: 30px;
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
   }
 
   .page-top-btn img {
@@ -1065,6 +1085,12 @@ nav ul {
     padding: 43px 0;
     display: flex;
     justify-content: space-between;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+
+  .approach-menu-link:hover {
+    background-color: rgba(34, 0, 0, 0.05);
   }
 
   .approach-title {
