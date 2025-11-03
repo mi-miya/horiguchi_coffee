@@ -217,9 +217,9 @@ header {
 }
 
 .modal-nav-group {
-  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
 .modal-nav-group:last-child {
@@ -234,6 +234,16 @@ header {
   padding: 8px 0;
   transition: opacity 0.2s ease;
 
+}
+
+.modal-nav-group-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-nav-group-body {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-nav-group .modal-nav-group-title {
@@ -1212,5 +1222,48 @@ nav ul {
   }
 
   footer .copyright small {
+  }
+
+  /* ========================================
+    モーダルメニュー（パソコン用）
+  ======================================== */
+  .modal-menu {
+  }
+
+  .modal-menu-content {
+    width: 624px;
+    padding: 200px 0 40px;
+  }
+
+  .modal-nav {
+    gap: 4px;
+  }
+
+  .modal-nav-group {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .modal-nav-group-header {
+    flex-shrink: 0;
+    width: 54%;
+  }
+
+  .modal-nav-group-body {
+    flex: 1;
+    padding: 8px 0;
+    gap: 4px;
+  }
+
+  .modal-nav-group-title {
+    margin-bottom: 0;
+  }
+
+  .modal-close-btn {
+    width: 64px;
+    top: 30px;
+  }
+
+  .close-svg {
   }
 }
