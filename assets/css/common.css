@@ -26,7 +26,7 @@
 }
 
 body {
-  background-color: #f5f5f0;
+  background-color: #eef1ec;
   font-family: "dnp-shuei-gothic-gin-std", sans-serif;
   margin: 0;
   padding: 0;
@@ -79,10 +79,10 @@ a {
 /* ========================================
   ヘッダー
 ======================================== */
-header {
+.horiguchi-header {
   position: sticky;
   top: 0;
-  background-color: #f5f5f0; /* ベージュ系の背景色 */
+  background-color: #eef1ec;
   border-bottom: 1px solid #220000;
   z-index: 100; /* 他の要素の上に表示されるように */
 }
@@ -130,7 +130,7 @@ header {
 }
 
 .register-btn {
-  background-color: #1e571c;
+  background-color: #3b6442;
   border-radius: 15px;
   padding: 2px 10px;
   font-size: 8px;
@@ -290,7 +290,7 @@ header {
 /* ========================================
   フッター
 ======================================== */
-footer {
+.horiguchi-footer {
   padding: 40px 24px 20px;
   margin-top: 40px;
   border-top: 1px solid #220000;
@@ -299,17 +299,17 @@ footer {
 .footer-container {
 }
 
-footer hr {
+.horiguchi-footer hr {
   margin: 30px 0;
   border-top: 1px solid #220000;
 }
 
-footer .copyright {
+.horiguchi-footer .copyright {
   margin: 0;
   text-align: left;
 }
 
-footer .copyright small {
+.horiguchi-footer .copyright small {
   font-size: 10px;
 }
 
@@ -540,7 +540,7 @@ nav ul {
   /* ========================================
     Footer（パソコン用）
   ======================================== */
-  footer {
+  .horiguchi-footer {
     margin-top: 70px;
     padding: 50px 0 40px;
   }
@@ -617,10 +617,10 @@ nav ul {
   .footer-links a {
   }
 
-  footer .copyright {
+  .horiguchi-footer .copyright {
   }
 
-  footer .copyright small {
+  .horiguchi-footer .copyright small {
   }
 
   /* ========================================

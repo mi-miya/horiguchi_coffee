@@ -476,11 +476,12 @@
 }
 
 .__submit:hover {
-  background-color: #deb85b;
+  background-color: #c8a055;
   transform: translateY(-2px);
 }
 
 .__submit:active {
+  background-color: #b8904f;
   transform: translateY(0);
 }
 
