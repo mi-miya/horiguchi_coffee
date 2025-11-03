@@ -173,10 +173,10 @@
       <section class="__common-content-bottom">
         <h2>FEATURES</h2>
         <img src="assets/img/indonesia.jpg" alt="インドネシア" class="features-image">
-        <div class="features-content">
+        <div class="features-result-content">
           <h3 class="mincho">選別後のリザルト表</h3>
-          <div>
-            <img src="assets/img/sample_check_result_1.jpg" alt="選別後のリザルト表">
+          <div class="features-result-content-inner">
+            <img src="assets/img/sample_check_result_1.jpg" alt="選別後のリザルト表" class="features-result-image">
             <p>
               ※ 表についての注釈を記載します。表についての注釈を記載します。<br>
               ※ 表についての注釈を記載します。表についての注釈を記載します。表についての注釈を記載します。<br>
@@ -186,95 +186,167 @@
         </div>
         <hr>
         <div class="features-container">
-          <div class="features-content">
-            <h3 class="mincho">焙煎度と風味</h3>
-            <div>
+          <h3 class="mincho features-container-heading">焙煎度と風味</h3>
+          <div class="features-main">
+            <div class="features-content-inner">
               <p class="features-description">焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文</p>
             </div>
-          </div>
-          <div class="features-tab-container">
-            <div class="features-tab-buttons">
-              <button onclick="switchTab(this, 'high-roast')" class="features-tab-button mincho active" data-tab="high-roast">
-                次項：ハイロースト
-              </button>
-              <button onclick="switchTab(this, 'city-roast')" class="features-tab-button mincho" data-tab="city-roast">
-                次項：シティロースト
-              </button>
-              <button onclick="switchTab(this, 'french-roast')" class="features-tab-button mincho" data-tab="french-roast">
-                次項：フレンチロースト
-              </button>
-            </div>
-            <div class="features-tab-content-area">
-              <div class="features-tab-content" id="high-roast" data-content="high-roast">
-                <img src="assets/img/roast.jpg" alt="ハイロースト" style="width: 100%; height: auto;">
-                <p>
-                  ここにハイローストのコンテンツが表示されます。<br>
-                  ボタンをクリックすると内容が切り替わります。<br>
-                  複数行のテキストも表示できます。
-                </p>
+            <div class="features-tab-container">
+              <div class="features-tab-buttons">
+                <button onclick="switchTab(this, 'high-roast')" class="features-tab-button mincho active" data-tab="high-roast">
+                  <span class="sp-only">次項：</span>ハイロースト
+                </button>
+                <button onclick="switchTab(this, 'city-roast')" class="features-tab-button mincho" data-tab="city-roast">
+                  <span class="sp-only">次項：</span>シティロースト
+                </button>
+                <button onclick="switchTab(this, 'french-roast')" class="features-tab-button mincho" data-tab="french-roast">
+                  <span class="sp-only">次項：</span>フレンチロースト
+                </button>
               </div>
-              <div class="features-tab-content" id="city-roast" data-content="city-roast" style="display: none;">
-                <img src="assets/img/roast.jpg" alt="ハイロースト" style="width: 100%; height: auto;">
-                <p>
-                  ここにシティローストのコンテンツが表示されます。<br>
-                  ボタンをクリックすると内容が切り替わります。<br>
-                  複数行のテキストも表示できます。
-                </p>
-              </div>
-              <div class="features-tab-content" id="french-roast" data-content="french-roast" style="display: none;">
-                <img src="assets/img/roast.jpg" alt="ハイロースト" style="width: 100%; height: auto;">
-                <p>
-                  ここにフレンチローストのコンテンツが表示されます。<br>
-                  ボタンをクリックすると内容が切り替わります。<br>
-                  複数行のテキストも表示できます。
-                </p>
+              <div class="features-tab-content-area">
+                <div class="features-tab-content" id="high-roast" data-content="high-roast">
+                  <img src="assets/img/roast.jpg" alt="ハイロースト">
+                  <p>
+                    ここにハイローストのコンテンツが表示されます。<br>
+                    ボタンをクリックすると内容が切り替わります。<br>
+                    複数行のテキストも表示できます。
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'city-roast')">
+                    シティロースト
+                  </button>
+                </div>
+                <div class="features-tab-content" id="city-roast" data-content="city-roast" style="display: none;">
+                  <img src="assets/img/roast.jpg" alt="ハイロースト">
+                  <p>
+                    ここにシティローストのコンテンツが表示されます。<br>
+                    ボタンをクリックすると内容が切り替わります。<br>
+                    複数行のテキストも表示できます。
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'french-roast')">
+                    フレンチロースト
+                  </button>
+                </div>
+                <div class="features-tab-content" id="french-roast" data-content="french-roast" style="display: none;">
+                  <img src="assets/img/roast.jpg" alt="ハイロースト">
+                  <p>
+                    ここにフレンチローストのコンテンツが表示されます。<br>
+                    ボタンをクリックすると内容が切り替わります。<br>
+                    複数行のテキストも表示できます。
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, '')">
+                    ハイロースト
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <hr class="pc-only">
+
         <div class="features-container">
-          <div class="features-content">
-            <h3 class="mincho">産地特性</h3>
-            <div>
-              <p class="features-description">焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文</p>
+          <h3 class="mincho features-container-heading">産地特性</h3>
+          <div class="features-main">
+            <div class="features-tab-container">
+              <div class="features-tab-buttons">
+                <button onclick="switchTab(this, 'origin-area')" class="features-tab-button mincho active" data-tab="origin-area">
+                  <span class="sp-only">次項：</span>エリア
+                </button>
+                <button onclick="switchTab(this, 'origin-climate')" class="features-tab-button mincho" data-tab="origin-climate">
+                  <span class="sp-only">次項：</span>気候
+                </button>
+                <button onclick="switchTab(this, 'origin-quality')" class="features-tab-button mincho" data-tab="origin-quality">
+                  <span class="sp-only">次項：</span>品質特性
+                </button>
+              </div>
+              <div class="features-tab-content-area">
+                <div class="features-tab-content" id="origin-area" data-content="origin-area">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+                  <p>
+                    毎年安定して良いコーヒーを届けてくれているチリポ地域。首都を擁し、海岸線に沿って南東方向に伸びるように広がるサン・ホセ州の東端に位置しています。ここはコスタリカ最高峰のチリポ山に抱かれた、都市部とは違い山と森が大部分を占める自然豊かな地域です。ここ数年、当社でも積極的に扱うようになったエリアであり、【ロス・クレストネス】を筆頭に【インペリオ・ロホ】や【コラソン・デ・ヘスス】など続々とマイクロミルが設立されています。ICAFE(コスタリカコーヒー協会)の生産エリア区分においてこの地域はかつて「ブルンカ」と呼ばれており、主に汎用品のコーヒーを生産するエリアとして認知されていました。毎年安定して良いコーヒーを届けてくれているチリポ地域。首都を擁し、海岸線に沿って南東方向に伸びる
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'origin-climate')">
+                    気候
+                  </button>
+                </div>
+                <div class="features-tab-content" id="origin-climate" data-content="origin-climate" style="display: none;">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+                  <p>
+                    ここに気候のコンテンツが表示されます。<br>
+                    ボタンをクリックすると内容が切り替わります。<br>
+                    複数行のテキストも表示できます。
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'origin-quality')">
+                    品質特性
+                  </button>
+                </div>
+                <div class="features-tab-content" id="origin-quality" data-content="origin-quality" style="display: none;">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+                  <p>
+                    ここに品質特性のコンテンツが表示されます。<br>
+                    ボタンをクリックすると内容が切り替わります。<br>
+                    複数行のテキストも表示できます。
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, '')">
+                    エリア
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="features-tab-container">
-            <div class="features-tab-buttons">
-              <button onclick="switchTab(this, 'origin-area')" class="features-tab-button mincho active" data-tab="origin-area">
-                次項：エリア
-              </button>
-              <button onclick="switchTab(this, 'origin-climate')" class="features-tab-button mincho" data-tab="origin-climate">
-                次項：気候
-              </button>
-              <button onclick="switchTab(this, 'origin-quality')" class="features-tab-button mincho" data-tab="origin-quality">
-                次項：品質特性
-              </button>
-            </div>
-            <div class="features-tab-content-area">
-              <div class="features-tab-content" id="origin-area" data-content="origin-area">
-                <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性" style="width: 100%; height: auto;">
-                <p>
-                  ここにエリアのコンテンツが表示されます。<br>
-                  ボタンをクリックすると内容が切り替わります。<br>
-                  複数行のテキストも表示できます。
-                </p>
+        </div>
+
+        <hr class="pc-only">
+
+        <div class="features-container">
+          <h3 class="mincho features-container-heading">生産地との<br class="pc-only">取り組み</h3>
+          <div class="features-main">
+            <div class="features-tab-container">
+              <div class="features-tab-buttons">
+                <button onclick="switchTab(this, 'origin-area')" class="features-tab-button mincho active" data-tab="origin-area">
+                  <span class="sp-only">次項：</span>持続可能性
+                </button>
+                <button onclick="switchTab(this, 'origin-climate')" class="features-tab-button mincho" data-tab="origin-climate">
+                  <span class="sp-only">次項：</span>トレーサビリティ
+                </button>
+                <button onclick="switchTab(this, 'origin-quality')" class="features-tab-button mincho" data-tab="origin-quality">
+                  <span class="sp-only">次項：</span>生産者支援
+                </button>
               </div>
-              <div class="features-tab-content" id="origin-climate" data-content="origin-climate" style="display: none;">
-                <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性" style="width: 100%; height: auto;">
-                <p>
-                  ここに気候のコンテンツが表示されます。<br>
-                  ボタンをクリックすると内容が切り替わります。<br>
-                  複数行のテキストも表示できます。
-                </p>
-              </div>
-              <div class="features-tab-content" id="origin-quality" data-content="origin-quality" style="display: none;">
-                <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性" style="width: 100%; height: auto;">
-                <p>
-                  ここに品質特性のコンテンツが表示されます。<br>
-                  ボタンをクリックすると内容が切り替わります。<br>
-                  複数行のテキストも表示できます。
-                </p>
+              <div class="features-tab-content-area">
+                <div class="features-tab-content" id="origin-area" data-content="origin-area">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+                  <p>
+                    ここにエリアのコンテンツが表示されます。<br>
+                    ボタンをクリックすると内容が切り替わります。<br>
+                    複数行のテキストも表示できます。
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'origin-climate')">
+                    トレーサビリティ
+                  </button>
+                </div>
+                <div class="features-tab-content" id="origin-climate" data-content="origin-climate" style="display: none;">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+                  <p>
+                    ここに気候のコンテンツが表示されます。<br>
+                    ボタンをクリックすると内容が切り替わります。<br>
+                    複数行のテキストも表示できます。
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'origin-quality')">
+                    生産者支援
+                  </button>
+                </div>
+                <div class="features-tab-content" id="origin-quality" data-content="origin-quality" style="display: none;">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+                  <p>
+                    ここに品質特性のコンテンツが表示されます。<br>
+                    ボタンをクリックすると内容が切り替わります。<br>
+                    複数行のテキストも表示できます。
+                  </p>
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, '')">
+                    持続可能性
+                  </button>
+                </div>
               </div>
             </div>
           </div>

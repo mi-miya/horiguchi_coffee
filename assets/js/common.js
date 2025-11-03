@@ -186,4 +186,25 @@ document.addEventListener('DOMContentLoaded', function() {
       selectedContent.style.display = 'block';
     }
   };
+
+  // 次のタブに移動する機能
+  window.switchToNextTab = function(button, nextTabId) {
+    // ボタンが属するタブコンテナを取得
+    const tabContainer = button.closest('.features-tab-container');
+    if (!tabContainer) return;
+
+    // 指定されたタブIDに対応するタブボタンを探す
+    const nextTabButton = tabContainer.querySelector('.features-tab-button[data-tab="' + nextTabId + '"]');
+    if (nextTabButton) {
+      // 見つかったタブボタンでswitchTabを呼び出す
+      switchTab(nextTabButton, nextTabId);
+    } else {
+      // 次のタブが見つからない場合（最後のタブの場合）、最初のタブに戻る
+      const firstTabButton = tabContainer.querySelector('.features-tab-button');
+      if (firstTabButton) {
+        const firstTabId = firstTabButton.getAttribute('data-tab');
+        switchTab(firstTabButton, firstTabId);
+      }
+    }
+  };
 });

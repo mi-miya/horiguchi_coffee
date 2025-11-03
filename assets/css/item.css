@@ -14,7 +14,6 @@
 
 /* メインコンテナ */
 .__inner {
-  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -98,7 +97,6 @@
 
 .__title {
   font-size: 20px;
-  font-weight: 600;
   color: #220000;
   margin: 0 0 20px 0;
   line-height: 1.4;
@@ -492,6 +490,9 @@
   padding: 40px 0;
   font-size: 14px;
   color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* セクション見出しスタイル（index.htmlと同様） */
@@ -509,8 +510,9 @@
 /* FEATURESセクション */
 .__common-content-bottom hr {
   margin: 40px 0;
-  border: none;
   border-top: 1px solid #220000;
+  height: 0;
+  width: 100%;
 }
 
 .features-image {
@@ -521,6 +523,49 @@
 
 .features-container {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-container-heading {
+  font-size: 1.5em;
+  color: #220000;
+  margin: 0 auto 20px;
+  width: 90%;
+}
+
+.features-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.features-result-content {
+  width: 90%;
+  max-width: 1440px;
+  margin-bottom: 40px;
+}
+
+.features-result-content h3 {
+  font-size: 1.5em;
+  color: #220000;
+  margin-bottom: 20px;
+}
+
+.features-result-content-inner {
+  max-width: 1080px;
+}
+
+.features-result-content-inner p {
+  color: #220000;
+  line-height: 2;
+}
+
+.features-result-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .features-content {
@@ -534,8 +579,19 @@
   margin-bottom: 20px;
 }
 
-.features-content > div {
+.features-content-inner {
   max-width: 1080px;
+}
+
+.features-main .features-content-inner {
+  width: 90%;
+  margin: 0 0 40px 0;
+  max-width: 1080px;
+}
+
+.features-content-inner p {
+  color: #220000;
+  line-height: 2;
 }
 
 .features-content img {
@@ -556,6 +612,12 @@
   max-width: 1080px;
   padding-bottom: 36px;
   border-bottom: 1px solid #220000;
+}
+
+.features-main .features-tab-container {
+  width: 90%;
+  margin: 0;
+  max-width: 1080px;
 }
 
 /* タブボタン群 */
@@ -628,35 +690,107 @@
   margin: 0;
 }
 
-/* タブレット以上 */
+.features-tab-content img {
+  width: 100%;
+  height: auto;
+}
+
+/* 次のタブに移動するボタン */
+.next-tab-button {
+  display: none;
+  margin-top: 34px;
+  width: 100%;
+  padding: 18px 40px 18px 10px;
+  background-color: transparent;
+  color: #220000;
+  border-top: 1px solid #220000;
+  border-bottom: 1px solid #220000;
+  border-left: none;
+  border-right: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  font-family: 'fot-tsukumin-pr6n', serif;
+  text-align: center;
+  position: relative;
+}
+
+.next-tab-button::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-image: url('../img/accordion_arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.next-tab-button:hover {
+  background-color: #f5f5f0;
+}
+
+.next-tab-button:active {
+  background-color: #f5f5f0;
+}
+
+/* タブレット以上（PC含む） */
 @media screen and (min-width: 768px) {
+  .__inner {
+    padding: 0;
+  }
+
+  .__common-content-bottom hr {
+    margin: 80px 0;
+  }
+
   .__information {
     flex-direction: row;
-    gap: 40px;
-    margin: 60px 0 80px;
+    gap: 26px;
+    margin: 46px auto 100px;
+    padding: 0;
+    width: 90%;
+    max-width: 1440px;
   }
 
   .__primary {
-    width: 50%;
+    width: 56%;
     flex-shrink: 0;
   }
 
   .__secondary {
-    width: 50%;
+    width: 55%;
     flex: 1;
   }
 
   .__title {
-    font-size: 28px;
-    margin-bottom: 24px;
+    font-size: 24px;
+    margin-bottom: 28px;
   }
 
   .__description {
-    font-size: 15px;
-    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 2.2;
+    margin-bottom: 80px;
   }
 
-  /* タブレット以上：テーブルレイアウトに戻す */
+  .__table th,
+  .__table td {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+
+  .__set {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
   .__set thead {
     display: table-header-group;
   }
@@ -672,7 +806,7 @@
 
   .__set tbody td {
     display: table-cell;
-    padding: 20px 16px;
+    padding: 28px 20px;
     border: 1px solid #220000;
     width: auto;
   }
@@ -689,58 +823,8 @@
   }
 
   .__set thead th {
-    padding: 20px 16px;
-    font-size: 15px;
-  }
-
-  .__set .__body .__total {
-    font-size: 24px;
-  }
-}
-
-/* PC以上 */
-@media screen and (min-width: 1024px) {
-  .__inner {
-    padding: 0 32px;
-  }
-
-  .__information {
-    gap: 60px;
-    margin: 80px 0 100px;
-  }
-
-  .__primary {
-    width: 45%;
-  }
-
-  .__secondary {
-    width: 55%;
-  }
-
-  .__title {
-    font-size: 32px;
-    margin-bottom: 28px;
-  }
-
-  .__description {
-    font-size: 16px;
-    line-height: 2.2;
-    margin-bottom: 50px;
-  }
-
-  .__table th,
-  .__table td {
-    padding: 16px 20px;
-    font-size: 15px;
-  }
-
-  .__set thead th {
     padding: 24px 20px;
     font-size: 16px;
-  }
-
-  .__set tbody td {
-    padding: 28px 20px;
   }
 
   .__set .__name {
@@ -752,9 +836,8 @@
   }
 
   .__submit {
-    max-width: 500px;
-    padding: 20px 40px;
-    font-size: 20px;
+    padding: 16px 36px;
+    font-size: 16px;
   }
 
   /* PC版：セクション見出しスタイル */
@@ -762,5 +845,110 @@
     font-size: 1.55em;
     padding: 56px 0 8px;
     letter-spacing: 0.12em;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .features-result-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 55px;
+  }
+
+  .features-result-content-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .features-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .features-result-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .features-container-heading {
+    font-size: 1.8em;
+    margin: 0;
+    width: 30%;
+    flex-shrink: 0;
+  }
+
+  .features-main {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .features-main .features-content-inner {
+    width: 100%;
+    margin: 0 0 40px 0;
+    padding-left: 0;
+  }
+
+  .features-main .features-tab-container {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  /* PC版：タブを横並びに */
+  .features-tab-buttons {
+    flex-direction: row;
+    border-top: none;
+    gap: 28px;
+  }
+
+  .features-tab-button {
+    width: auto;
+    border: none;
+    font-size: 1.4em;
+    padding: 0;
+  }
+
+  .features-tab-button::after {
+    display: none;
+  }
+
+  .features-tab-button.active {
+    background-color: #f5f5f0;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: -1px;
+  }
+
+  .features-tab-content-area {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+
+  .features-tab-content img {
+    margin-bottom: 28px;
+  }
+
+  .features-content .features-content-inner {
+    padding-left: 6.5%;
+  }
+
+  .features-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 55px;
+  }
+
+  .features-image {
+    margin-bottom: 30px;
+    max-width: 1440px;
+  }
+
+  /* PC画面でのみ次のタブボタンを表示 */
+  .next-tab-button {
+    display: inline-block;
   }
 }
