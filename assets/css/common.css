@@ -6,7 +6,7 @@
   * ブレークポイント:
     - タブレット: 768px以上
     - PC: 1024px以上
-  * 最大幅：1920px
+  * 最大幅：1080px
     * テキストが主の箇所は、読みやすさを担保するため 1080px とする
 ======================================== */
 
@@ -52,10 +52,10 @@ a {
 /* ========================================
   レイアウトコンテナ
 ======================================== */
-/* 画像などのコンテンツ用：最大幅1920px */
+/* 画像などのコンテンツ用：最大幅1080px */
 .container-wide {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 16px; /* スマホ: 左右16px */
 }
@@ -493,6 +493,7 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 1px solid #220000;
+  margin: 0 auto;
 }
 
 /* ========================================
@@ -804,6 +805,8 @@ nav ul {
     justify-content: space-between;
     align-items: center;
     padding: 26px 24px 3px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   /* 上部：アクションアイテムを右側に */
@@ -898,6 +901,10 @@ nav ul {
   }
 
   .hero-images-container {
+    max-height: 1000px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .hero-image-left {
@@ -937,17 +944,32 @@ nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
+    max-width: 1440px;
   }
 
   .lineup-item {
     width: 100%;
-    border-bottom: 1px solid #220000;
+    border: 1px solid #220000;
+    border-bottom: 0;
     padding: 26px 0 52px;
     margin: 0;
   }
 
+  .lineup-item:first-child, .lineup-item:nth-child(2) {
+    border-top: 0;
+  }
+
   .lineup-item:nth-child(2n) {
-    border-left: 1px solid #220000;
+    border-left: 0;
+  }
+
+  .lineup-item:last-child, .lineup-item:nth-last-child(2) {
+    border-bottom: 0 !important;
+  }
+
+
+  .lineup-item:last-child {
+    border-bottom: 1px solid #220000;
   }
 
   .lineup-item-content {
@@ -955,6 +977,7 @@ nav ul {
 
   .item-image {
     margin-bottom: 20px;
+    max-height: 400px;
   }
 
   .item-text {
@@ -980,6 +1003,8 @@ nav ul {
 
   .news-content {
     width: 66%;
+    max-width: 1080px;
+    margin: 0 auto;
   }
 
   .news-content h2 {
@@ -1010,6 +1035,8 @@ nav ul {
   .approach-intro {
     width: 66%;
     padding-bottom: 2.2em;
+    max-width: 1080px;
+    margin: 0 auto;
   }
 
   .approach-intro p {
@@ -1023,6 +1050,7 @@ nav ul {
   .approach-menu {
     width: 77%;
     margin: 0 auto 70px;
+    max-width: 1080px;
   }
 
   .approach-menu li {
@@ -1072,17 +1100,20 @@ nav ul {
 
   .approach-item-image-full {
     margin-bottom: 44px;
+    max-width: 1080px;
+    margin: 0 auto;
+    max-height: 880px;
   }
 
   .approach-container {
     max-width: 1080px;
     width: 89%;
     margin: 0 auto;
-    padding-left: 6.2%;
   }
 
   .approach-item {
     margin-bottom: 20px;
+    padding-top: 80px;
   }
 
   .approach-item h3 {
@@ -1147,7 +1178,7 @@ nav ul {
   }
 
   .footer-container {
-    max-width: 960px;
+    max-width: 1080px;
     margin: 0 auto;
   }
 
