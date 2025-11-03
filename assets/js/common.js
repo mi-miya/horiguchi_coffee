@@ -109,4 +109,81 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初回読み込み時にもチェック
     togglePageTopButton();
   }
+
+  // アコーディオンメニューの機能（商品詳細ページ用）
+  const accordionTable = document.querySelector('.c-table-dl');
+  if (accordionTable) {
+    const accordionRows = accordionTable.querySelectorAll('tbody tr');
+
+    accordionRows.forEach(function(row) {
+      const th = row.querySelector('th');
+      const td = row.querySelector('td');
+
+      if (th && td) {
+        // thをクリック可能にする
+        th.style.cursor = 'pointer';
+        th.setAttribute('role', 'button');
+        th.setAttribute('aria-expanded', 'false');
+        th.setAttribute('tabindex', '0');
+
+        // デフォルトではtdを非表示
+        td.style.display = 'none';
+
+        // クリックイベント
+        function toggleAccordion() {
+          const isExpanded = th.getAttribute('aria-expanded') === 'true';
+
+          if (isExpanded) {
+            // 閉じる
+            td.style.display = 'none';
+            th.setAttribute('aria-expanded', 'false');
+            th.classList.remove('accordion-open');
+          } else {
+            // 開く
+            td.style.display = 'block';
+            th.setAttribute('aria-expanded', 'true');
+            th.classList.add('accordion-open');
+          }
+        }
+
+        th.addEventListener('click', toggleAccordion);
+
+        // キーボード操作（EnterとSpaceキー）
+        th.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleAccordion();
+          }
+        });
+      }
+    });
+  }
+
+  // タブ切り替え機能（FEATURESセクション用）
+  window.switchTab = function(button, tabId) {
+    // ボタンが属するタブコンテナを取得
+    const tabContainer = button.closest('.features-tab-container');
+    if (!tabContainer) return;
+
+    // 同じコンテナ内のすべてのタブボタンからactiveクラスを削除
+    const buttonsInContainer = tabContainer.querySelectorAll('.features-tab-button');
+    buttonsInContainer.forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+
+    // クリックされたボタンにactiveクラスを追加
+    button.classList.add('active');
+
+    // 同じコンテナ内のすべてのタブコンテンツを非表示
+    const contentsInContainer = tabContainer.querySelectorAll('.features-tab-content');
+    contentsInContainer.forEach(function(content) {
+      content.style.display = 'none';
+    });
+
+    // 選択されたタブのコンテンツを表示（同じコンテナ内のもののみ）
+    const selectedContent = tabContainer.querySelector('#' + tabId);
+    if (selectedContent) {
+      selectedContent.style.display = 'block';
+    }
+  };
 });

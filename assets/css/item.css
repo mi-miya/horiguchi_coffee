@@ -1,14 +1,766 @@
 /* ========================================
   商品詳細ページ（item.html）固有のCSS
 ======================================== */
+
+/* パンくずリスト非表示 */
 .__breadcrumb {
   display: none;
 }
 
+/* おすすめ商品セクション非表示 */
 .__block.__block--recommend {
   display: none !important;
 }
 
+/* メインコンテナ */
+.__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* 商品情報セクション */
 .__information {
   display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 40px 0 60px;
+  padding: 0 16px;
+}
+
+/* 商品画像セクション */
+.__primary {
+  width: 100%;
+}
+
+.__photo {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.__main {
+  width: 100%;
+  background-color: #ffffff;
+  border: none;
+  overflow: hidden;
+}
+
+.__main a {
+  display: block;
+  width: 100%;
+}
+
+.__main img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.__sub {
+  width: 100%;
+}
+
+.__sub ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.__sub li {
+  flex: 1;
+  width: 100%;
+}
+
+.__sub a {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.__sub img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* 商品詳細情報セクション */
+.__secondary {
+  width: 100%;
+}
+
+.__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #220000;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+}
+
+.__description {
+  font-size: 14px;
+  line-height: 2;
+  color: #220000;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.__description br {
+  display: block;
+  margin: 4px 0;
+}
+
+/* 仕様テーブル */
+.__spec {
+  margin-top: 30px;
+}
+
+.__table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+}
+
+.__table tbody {
+  display: block;
+}
+
+.__table tr {
+  display: block;
+  border-top: 1px solid #220000;
+  border-bottom: 1px solid #220000;
+}
+
+.__table tr:last-child {
+  border-top: none;
+}
+
+.__table th {
+  padding: 18px 0;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.__table th {
+  font-weight: 600;
+  position: relative;
+  padding-right: 40px;
+  transition: background-color 0.2s ease;
+}
+
+.__table th::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-image: url('../img/accordion_arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.__table th.accordion-open::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.__table td {
+  background-color: #ffffff;
+  display: none;
+  transition: opacity 0.3s ease;
+  padding: 18px 8px;
+  font-size: 14px;
+}
+
+.__table th.accordion-open + td {
+  display: block;
+}
+
+/* 注文フォームセクション */
+.c-form {
+  margin: 40px 0 60px;
+}
+
+.__set {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.__set table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+  border: none;
+}
+
+.__set thead {
+  display: none;
+}
+
+.__set thead th {
+  padding: 16px 12px;
+  border: 1px solid #220000;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.__set thead .__description {
+  text-align: left;
+}
+
+.__set thead .__price {
+  min-width: 140px;
+}
+
+.__set thead .__order {
+  min-width: 100px;
+}
+
+.__set tbody tr {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f0;
+  border-radius: 8px;
+  padding: 24px 20px;
+  border: none;
+  gap: 0;
+}
+
+.__set tbody td {
+  padding: 20px 0;
+  border: none;
+  border-top: 1px solid #e5e5e0;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.__set tbody td:first-child {
+  border-top: none;
+  padding-top: 0;
+  padding-bottom: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 商品価格（税込）表示 */
+.__set tbody td.__description {
+  position: relative;
+}
+
+.__set tbody td.__description::after {
+  content: '商品価格 (税込) : 1,000,000円';
+  display: block;
+  font-size: 14px;
+  color: #220000;
+  margin-top: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* スマホ用：各セルのラベル表示 */
+.__set tbody td.__description::before {
+  display: none;
+}
+
+.__set tbody td.__price {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.__set tbody td.__price::before {
+  display: none;
+}
+
+.__set tbody td.__order {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.__set tbody td.__order .__heading {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #220000;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.__set tbody td.__order .__error {
+  display: none !important;
+}
+
+.__set .__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #220000;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.__set .__spec {
+  display: none;
+}
+
+.__set .__body {
+  width: 100%;
+}
+
+/* 価格セクション：右側に「会員のみ公開」表示 */
+.__set td.__price .__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.__set td.__price .__heading .__total {
+  font-size: 14px;
+  font-weight: 600;
+  color: #220000;
+  line-height: 1.4;
+}
+
+.__set td.__price .__heading .__detail {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.__set td.__price .__body {
+  display: none;
+}
+
+.__set td.__price::after {
+  content: '会員のみ公開';
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+  line-height: 1.4;
+  align-self: flex-start;
+  margin-top: 0;
+}
+
+/* 注文数セクション：右側に「ログインしてください」表示 */
+.__set td.__order .__body {
+  display: none;
+}
+
+.__set td.__order::after {
+  content: 'ご注文には\A ログインしてください';
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+  white-space: pre;
+  text-align: right;
+  line-height: 1.6;
+  align-self: flex-start;
+  margin-top: 0;
+}
+
+
+.__set .__input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.__set .__input input {
+  width: 80px;
+  padding: 10px 12px;
+  border: 1px solid #220000;
+  font-size: 16px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #220000;
+}
+
+.__set .__input input:focus {
+  outline: 2px solid #deb85b;
+  outline-offset: 2px;
+}
+
+.__spin {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.__spin .__minus,
+.__spin .__plus {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #220000;
+  background-color: #ffffff;
+  color: #220000;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.__spin .__minus:hover,
+.__spin .__plus:hover {
+  background-color: #deb85b;
+  color: #ffffff;
+}
+
+.__spin .__minus::before {
+  content: "−";
+  display: block;
+}
+
+.__spin .__plus::before {
+  content: "+";
+  display: block;
+}
+
+.__cart-count {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.__cart-count dt,
+.__cart-count dd {
+  display: inline;
+  margin: 0;
+}
+
+.__cart-count dt::after {
+  content: ": ";
+}
+
+/* カート追加ボタン */
+.__add-cart {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.__submit {
+  width: 100%;
+  max-width: 400px;
+  padding: 16px 32px;
+  background-color: #deb85b;
+  color: #220000;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  letter-spacing: 0.05em;
+}
+
+.__submit:hover {
+  background-color: #deb85b;
+  transform: translateY(-2px);
+}
+
+.__submit:active {
+  transform: translateY(0);
+}
+
+/* フリースペース */
+.__common-content-middle,
+.__common-content-bottom {
+  padding: 40px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* セクション見出しスタイル（index.htmlと同様） */
+.__common-content-bottom h2 {
+  padding: 40px 0 10px;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: 1px solid #220000;
+  color: #220000;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.08em;
+}
+
+/* FEATURESセクション */
+.__common-content-bottom hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid #220000;
+}
+
+.features-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.features-container {
+  margin-bottom: 40px;
+}
+
+.features-content {
+  width: 90%;
+  margin: 0 auto 40px;
+}
+
+.features-content h3 {
+  font-size: 1.5em;
+  color: #220000;
+  margin-bottom: 20px;
+}
+
+.features-content > div {
+  max-width: 1080px;
+}
+
+.features-content img {
+  width: 100%;
+  height: auto;
+}
+
+.features-description {
+  font-size: 1.3em;
+  color: #220000;
+  line-height: 1.8;
+}
+
+/* タブコンテナ */
+.features-tab-container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #220000;
+}
+
+/* タブボタン群 */
+.features-tab-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid #220000;
+}
+
+/* タブボタン */
+.features-tab-button {
+  width: 100%;
+  padding: 18px 10px;
+  padding-right: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #220000;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #220000;
+  font-weight: 400;
+  position: relative;
+  font-family: 'fot-tsukumin-pr6n', serif;
+  transition: background-color 0.2s ease;
+}
+
+.features-tab-button::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-image: url('../img/accordion_arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.features-tab-button:hover {
+  background-color: #f5f5f0;
+}
+
+.features-tab-button.active {
+  background-color: #f5f5f0;
+  font-weight: 600;
+}
+
+.features-tab-button.active::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* タブコンテンツ表示エリア */
+.features-tab-content-area {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.features-tab-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #220000;
+}
+
+.features-tab-content p {
+  margin: 0;
+}
+
+/* タブレット以上 */
+@media screen and (min-width: 768px) {
+  .__information {
+    flex-direction: row;
+    gap: 40px;
+    margin: 60px 0 80px;
+  }
+
+  .__primary {
+    width: 50%;
+    flex-shrink: 0;
+  }
+
+  .__secondary {
+    width: 50%;
+    flex: 1;
+  }
+
+  .__title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .__description {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  /* タブレット以上：テーブルレイアウトに戻す */
+  .__set thead {
+    display: table-header-group;
+  }
+
+  .__set tbody tr {
+    display: table-row;
+    border: none;
+  }
+
+  .__set tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .__set tbody td {
+    display: table-cell;
+    padding: 20px 16px;
+    border: 1px solid #220000;
+    width: auto;
+  }
+
+  .__set tbody td:first-child {
+    border-top: 1px solid #220000;
+  }
+
+  /* タブレット以上：::beforeのラベルを非表示 */
+  .__set tbody td.__description::before,
+  .__set tbody td.__price::before,
+  .__set tbody td.__order::before {
+    display: none;
+  }
+
+  .__set thead th {
+    padding: 20px 16px;
+    font-size: 15px;
+  }
+
+  .__set .__body .__total {
+    font-size: 24px;
+  }
+}
+
+/* PC以上 */
+@media screen and (min-width: 1024px) {
+  .__inner {
+    padding: 0 32px;
+  }
+
+  .__information {
+    gap: 60px;
+    margin: 80px 0 100px;
+  }
+
+  .__primary {
+    width: 45%;
+  }
+
+  .__secondary {
+    width: 55%;
+  }
+
+  .__title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .__description {
+    font-size: 16px;
+    line-height: 2.2;
+    margin-bottom: 50px;
+  }
+
+  .__table th,
+  .__table td {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+
+  .__set thead th {
+    padding: 24px 20px;
+    font-size: 16px;
+  }
+
+  .__set tbody td {
+    padding: 28px 20px;
+  }
+
+  .__set .__name {
+    font-size: 18px;
+  }
+
+  .__set .__body .__total {
+    font-size: 28px;
+  }
+
+  .__submit {
+    max-width: 500px;
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+
+  /* PC版：セクション見出しスタイル */
+  .__common-content-bottom h2 {
+    font-size: 1.55em;
+    padding: 56px 0 8px;
+    letter-spacing: 0.12em;
+  }
 }
