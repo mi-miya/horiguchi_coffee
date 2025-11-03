@@ -1430,3 +1430,10 @@ nav ul {
   .close-svg {
   }
 }
+
+/** ========================================
+  商品詳細ページ（detail.html）用のCSS
+======================================== **/
+.__block.__block--recommend {
+  display: none !important;
+}
