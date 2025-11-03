@@ -13,6 +13,14 @@
 /* ========================================
   基本設定
 ======================================== */
+#trial-banner {
+  display: none !important;
+}
+
+.__drawer {
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -615,6 +623,81 @@ nav ul {
 }
 
 /* ========================================
+  新しいNewsセクション（既存と同じスタイル）
+======================================== */
+.__block--news {
+  padding: 20px 0;
+}
+
+.__block--news .__heading.c-heading-main,
+.__block--news .__heading.__heading--default {
+  width: 82%;
+  margin: 0 auto;
+  padding: 20px 0 0;
+}
+
+.__block--news .__heading.c-heading-main > span,
+.__block--news .__heading.__heading--default > span {
+  font-size: 0.7em;
+  font-weight: 400;
+  margin-bottom: 1em;
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+.__block--news .__body {
+  width: 82%;
+  margin: 0 auto;
+  padding: 0 0 10px;
+}
+
+.__block--news .__body > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.__block--news .__body > ul > li {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.__block--news .__body > ul > li > a {
+  width: 100%;
+  display: flex;
+  align-items: top;
+  font-size: 15px;
+  margin: 0;
+  color: #220000;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.__block--news .__date {
+  font-size: 15px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.__block--news .__title {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.__block--news .__label {
+  display: none;
+}
+
+.__block--news .__subject {
+  display: block;
+}
+
+.__block--news .__body > ul > li > a:hover {
+  opacity: 0.6;
+}
+
+/* ========================================
   APPROACHESセクション
 ======================================== */
 .approaches h2 {
@@ -780,7 +863,7 @@ nav ul {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
-  z-index: 99;
+  z-index: 100;
 }
 
 .page-top-btn:hover {
@@ -1038,6 +1121,29 @@ nav ul {
   }
 
   .news-item time {
+    margin-right: 32px;
+  }
+
+  /* 新しいNewsセクション（PC版） */
+  .__block--news .__heading.c-heading-main,
+  .__block--news .__heading.__heading--default {
+    width: 66%;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .__block--news .__heading.c-heading-main > span,
+  .__block--news .__heading.__heading--default > span {
+    margin-bottom: 1.24em;
+  }
+
+  .__block--news .__body {
+    width: 66%;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .__block--news .__date {
     margin-right: 32px;
   }
 
