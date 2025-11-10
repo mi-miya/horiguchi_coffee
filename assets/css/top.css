@@ -132,17 +132,23 @@
 /* ========================================
   アイテム画像スタイル
 ======================================== */
+.item-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
 .item-image {
   width: 100%;
   height: auto;
   object-fit: cover;
-  margin-bottom: 24px;
   display: block;
   transition: transform 0.3s ease;
+  transform-origin: center center;
 }
 
-.item-image:hover {
-  transform: scale(1.05);
+.item-image-wrapper:hover .item-image {
+  transform: scale(1.1);
 }
 
 /* ========================================
@@ -504,8 +510,11 @@
   .lineup-item-content {
   }
 
-  .item-image {
+  .item-image-wrapper {
     margin-bottom: 20px;
+  }
+
+  .item-image {
     max-height: 400px;
   }
 
