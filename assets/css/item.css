@@ -484,7 +484,7 @@
 
 /* フリースペース */
 .__common-content-middle,
-.__common-content-bottom {
+.__content-bottom {
   padding: 40px 0;
   font-size: 14px;
   color: #666;
@@ -494,7 +494,7 @@
 }
 
 /* セクション見出しスタイル（index.htmlと同様） */
-.__common-content-bottom h2 {
+.__content-bottom h2 {
   padding: 40px 0 10px;
   font-size: 1.5em;
   font-weight: 400;
@@ -506,7 +506,7 @@
 }
 
 /* FEATURESセクション */
-.__common-content-bottom hr {
+.__content-bottom hr {
   margin: 40px 0;
   border-top: 1px solid #220000;
   height: 0;
@@ -742,7 +742,7 @@
     padding: 0;
   }
 
-  .__common-content-bottom hr {
+  .__content-bottom hr {
     margin: 80px 0;
   }
 
@@ -838,7 +838,7 @@
   }
 
   /* PC版：セクション見出しスタイル */
-  .__common-content-bottom h2 {
+  .__content-bottom h2 {
     font-size: 1.55em;
     padding: 56px 0 8px;
     letter-spacing: 0.12em;

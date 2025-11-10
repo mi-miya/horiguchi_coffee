@@ -39,6 +39,7 @@ body {
 
 .mincho {
   font-family: "fot-tsukumin-pr6n", serif;
+  font-weight: 400;
 }
 
 /* 基本のリンクスタイル */
@@ -338,7 +339,6 @@ a {
   font-size: 14px;
   line-height: 1.8;
   margin: 0 0 10px 0;
-  font-weight: 600;
 }
 
 .footer-nav {
@@ -574,7 +574,7 @@ nav ul {
   }
 
   .footer-logo-nav-links a {
-    font-size: 18px;
+    font-size: 14px;
     color: #220000;
     text-decoration: none;
     letter-spacing: 0.05em;
@@ -603,7 +603,7 @@ nav ul {
   }
 
   .footer-nav-right a {
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 0.05em;
   }
 
