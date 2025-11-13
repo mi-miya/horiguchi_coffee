@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
     productTitle.parentNode.insertBefore(categoryLabel, productTitle);
   }
 
+  // カートボタンのテキストを変更
+  const cartButton = document.querySelector('.c-button-submit.__js-add-cart');
+  if (cartButton) {
+    cartButton.textContent = 'カートに追加する';
+  }
+
   const menuButton = document.querySelector('.sp-menu-button');
   const modalMenu = document.getElementById('modal-menu');
   const modalCloseBtn = document.querySelector('.modal-close-btn');
