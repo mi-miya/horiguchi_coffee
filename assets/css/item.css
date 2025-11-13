@@ -21,7 +21,7 @@
 .__information {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
   margin: 40px 0 60px;
   padding: 0 16px;
 }
@@ -92,10 +92,17 @@
 /* 商品詳細情報セクション */
 .__secondary {
   width: 100%;
+  padding-top: 10px;
+}
+
+/* カテゴリーラベル */
+.__category-label {
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 
 .__title {
-  font-size: 20px;
+  font-size: 22px;
   color: #220000;
   margin: 0 0 20px 0;
   line-height: 1.4;
@@ -759,6 +766,11 @@
   .__secondary {
     width: 55%;
     flex: 1;
+  }
+
+  .__category-label {
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 
   .__title {

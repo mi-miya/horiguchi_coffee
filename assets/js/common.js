@@ -1,5 +1,14 @@
 // ハンバーガーメニューの開閉機能
 document.addEventListener('DOMContentLoaded', function() {
+  // 商品タイトルの上に「producing area / brand name」を挿入
+  const productTitle = document.querySelector('.__secondary .__title');
+  if (productTitle) {
+    const categoryLabel = document.createElement('div');
+    categoryLabel.className = '__category-label';
+    categoryLabel.textContent = 'producing area / brand name';
+    productTitle.parentNode.insertBefore(categoryLabel, productTitle);
+  }
+
   const menuButton = document.querySelector('.sp-menu-button');
   const modalMenu = document.getElementById('modal-menu');
   const modalCloseBtn = document.querySelector('.modal-close-btn');
