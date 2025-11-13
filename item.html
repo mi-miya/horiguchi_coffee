@@ -34,15 +34,15 @@
         <div class="__primary">
           <div class="__photo">
             <div class="__main">
-              <a href="https://files.bcart.jp/digital-ya02/uploads/2025-10-21%20004326.png">
-                <img src="https://files.bcart.jp/digital-ya02/uploads/2025-10-21%20004326.png" alt="グァテマラ/サンタバルバラ" data-original-src="https://files.bcart.jp/digital-ya02/uploads/2025-10-21%20004326.png" data-original-src-width="579" data-original-src-height="384">
+              <a href="#">
+                <img src="assets/img/bean1.jpg" alt="グァテマラ/サンタバルバラ" data-original-src="https://files.bcart.jp/digital-ya02/uploads/2025-10-21%20004326.png" data-original-src-width="579" data-original-src-height="384">
               </a>
             </div>
             <div class="__sub">
               <ul>
                 <li>
-                  <a href="https://files.bcart.jp/digital-ya02/uploads/2025-10-21%20004350.png">
-                    <img src="https://files.bcart.jp/digital-ya02/uploads/2025-10-21%20004350.png" alt="" data-original-src="https://files.bcart.jp/digital-ya02/uploads/2025-10-21%20004350.png" data-original-src-width="582" data-original-src-height="388">
+                  <a href="#">
+                    <img src="assets/img/P2230883Kenya.JPG" alt="" data-original-src="https://files.bcart.jp/digital-ya02/uploads/2025-10-21%20004350.png" data-original-src-width="582" data-original-src-height="388">
                   </a>
                 </li>
               </ul>
@@ -165,18 +165,10 @@
               <p class="features-description">焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文焙煎度と風味の全体説明文</p>
             </div>
             <div class="features-tab-container">
-              <div class="features-tab-buttons">
+              <div class="features-tab-item">
                 <button onclick="switchTab(this, 'high-roast')" class="features-tab-button mincho active" data-tab="high-roast">
-                  <span class="sp-only">次項：</span>ハイロースト
+                  ハイロースト
                 </button>
-                <button onclick="switchTab(this, 'city-roast')" class="features-tab-button mincho" data-tab="city-roast">
-                  <span class="sp-only">次項：</span>シティロースト
-                </button>
-                <button onclick="switchTab(this, 'french-roast')" class="features-tab-button mincho" data-tab="french-roast">
-                  <span class="sp-only">次項：</span>フレンチロースト
-                </button>
-              </div>
-              <div class="features-tab-content-area">
                 <div class="features-tab-content" id="high-roast" data-content="high-roast">
                   <img src="assets/img/roast.jpg" alt="ハイロースト">
                   <p>
@@ -188,8 +180,13 @@
                     シティロースト
                   </button>
                 </div>
+              </div>
+              <div class="features-tab-item">
+                <button onclick="switchTab(this, 'city-roast')" class="features-tab-button mincho" data-tab="city-roast">
+                  シティロースト
+                </button>
                 <div class="features-tab-content" id="city-roast" data-content="city-roast" style="display: none;">
-                  <img src="assets/img/roast.jpg" alt="ハイロースト">
+                  <img src="assets/img/roast.jpg" alt="シティロースト">
                   <p>
                     ここにシティローストのコンテンツが表示されます。<br>
                     ボタンをクリックすると内容が切り替わります。<br>
@@ -199,14 +196,19 @@
                     フレンチロースト
                   </button>
                 </div>
+              </div>
+              <div class="features-tab-item">
+                <button onclick="switchTab(this, 'french-roast')" class="features-tab-button mincho" data-tab="french-roast">
+                  フレンチロースト
+                </button>
                 <div class="features-tab-content" id="french-roast" data-content="french-roast" style="display: none;">
-                  <img src="assets/img/roast.jpg" alt="ハイロースト">
+                  <img src="assets/img/roast.jpg" alt="フレンチロースト">
                   <p>
                     ここにフレンチローストのコンテンツが表示されます。<br>
                     ボタンをクリックすると内容が切り替わります。<br>
                     複数行のテキストも表示できます。
                   </p>
-                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, '')">
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'high-roast')">
                     ハイロースト
                   </button>
                 </div>
@@ -221,18 +223,10 @@
           <h3 class="mincho features-container-heading">産地特性</h3>
           <div class="features-main">
             <div class="features-tab-container">
-              <div class="features-tab-buttons">
+              <div class="features-tab-item">
                 <button onclick="switchTab(this, 'origin-area')" class="features-tab-button mincho active" data-tab="origin-area">
-                  <span class="sp-only">次項：</span>エリア
+                  エリア
                 </button>
-                <button onclick="switchTab(this, 'origin-climate')" class="features-tab-button mincho" data-tab="origin-climate">
-                  <span class="sp-only">次項：</span>気候
-                </button>
-                <button onclick="switchTab(this, 'origin-quality')" class="features-tab-button mincho" data-tab="origin-quality">
-                  <span class="sp-only">次項：</span>品質特性
-                </button>
-              </div>
-              <div class="features-tab-content-area">
                 <div class="features-tab-content" id="origin-area" data-content="origin-area">
                   <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
                   <p>
@@ -242,6 +236,11 @@
                     気候
                   </button>
                 </div>
+              </div>
+              <div class="features-tab-item">
+                <button onclick="switchTab(this, 'origin-climate')" class="features-tab-button mincho" data-tab="origin-climate">
+                  気候
+                </button>
                 <div class="features-tab-content" id="origin-climate" data-content="origin-climate" style="display: none;">
                   <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
                   <p>
@@ -253,6 +252,11 @@
                     品質特性
                   </button>
                 </div>
+              </div>
+              <div class="features-tab-item">
+                <button onclick="switchTab(this, 'origin-quality')" class="features-tab-button mincho" data-tab="origin-quality">
+                  品質特性
+                </button>
                 <div class="features-tab-content" id="origin-quality" data-content="origin-quality" style="display: none;">
                   <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
                   <p>
@@ -260,7 +264,7 @@
                     ボタンをクリックすると内容が切り替わります。<br>
                     複数行のテキストも表示できます。
                   </p>
-                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, '')">
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'origin-area')">
                     エリア
                   </button>
                 </div>
@@ -275,48 +279,50 @@
           <h3 class="mincho features-container-heading">生産地との<br class="pc-only">取り組み</h3>
           <div class="features-main">
             <div class="features-tab-container">
-              <div class="features-tab-buttons">
-                <button onclick="switchTab(this, 'origin-area')" class="features-tab-button mincho active" data-tab="origin-area">
-                  <span class="sp-only">次項：</span>持続可能性
+              <div class="features-tab-item">
+                <button onclick="switchTab(this, 'sustainability')" class="features-tab-button mincho active" data-tab="sustainability">
+                  持続可能性
                 </button>
-                <button onclick="switchTab(this, 'origin-climate')" class="features-tab-button mincho" data-tab="origin-climate">
-                  <span class="sp-only">次項：</span>トレーサビリティ
-                </button>
-                <button onclick="switchTab(this, 'origin-quality')" class="features-tab-button mincho" data-tab="origin-quality">
-                  <span class="sp-only">次項：</span>生産者支援
-                </button>
-              </div>
-              <div class="features-tab-content-area">
-                <div class="features-tab-content" id="origin-area" data-content="origin-area">
-                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+                <div class="features-tab-content" id="sustainability" data-content="sustainability">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="持続可能性">
                   <p>
                     ここにエリアのコンテンツが表示されます。<br>
                     ボタンをクリックすると内容が切り替わります。<br>
                     複数行のテキストも表示できます。
                   </p>
-                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'origin-climate')">
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'traceability')">
                     トレーサビリティ
                   </button>
                 </div>
-                <div class="features-tab-content" id="origin-climate" data-content="origin-climate" style="display: none;">
-                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+              </div>
+              <div class="features-tab-item">
+                <button onclick="switchTab(this, 'traceability')" class="features-tab-button mincho" data-tab="traceability">
+                  トレーサビリティ
+                </button>
+                <div class="features-tab-content" id="traceability" data-content="traceability" style="display: none;">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="トレーサビリティ">
                   <p>
                     ここに気候のコンテンツが表示されます。<br>
                     ボタンをクリックすると内容が切り替わります。<br>
                     複数行のテキストも表示できます。
                   </p>
-                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'origin-quality')">
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'support')">
                     生産者支援
                   </button>
                 </div>
-                <div class="features-tab-content" id="origin-quality" data-content="origin-quality" style="display: none;">
-                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="アフリカ人女性">
+              </div>
+              <div class="features-tab-item">
+                <button onclick="switchTab(this, 'support')" class="features-tab-button mincho" data-tab="support">
+                  生産者支援
+                </button>
+                <div class="features-tab-content" id="support" data-content="support" style="display: none;">
+                  <img src="assets/img/P1000529_Rw_Muyongwe.JPG" alt="生産者支援">
                   <p>
                     ここに品質特性のコンテンツが表示されます。<br>
                     ボタンをクリックすると内容が切り替わります。<br>
                     複数行のテキストも表示できます。
                   </p>
-                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, '')">
+                  <button type="button" class="next-tab-button mincho" onclick="switchToNextTab(this, 'sustainability')">
                     持続可能性
                   </button>
                 </div>
