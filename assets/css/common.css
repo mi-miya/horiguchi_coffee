@@ -38,8 +38,10 @@ body {
 }
 
 .mincho {
-  font-family: "fot-tsukumin-pr6n", serif;
-  font-weight: 400;
+  /* font-family: "fot-tsukumin-pr6n", serif; */
+  /* font-weight: 400; */
+  font-family: "source-han-serif-japanese", serif;
+  font-weight: 600;
 }
 
 /* 基本のリンクスタイル */

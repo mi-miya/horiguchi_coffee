@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     cartButton.textContent = 'カートに追加する';
   }
 
+  // トップページの「新着情報」を「NEWS」に変更
+  const newsHeading = document.querySelector('.__block--news .c-heading-main span');
+  if (newsHeading && newsHeading.textContent === '新着情報') {
+    newsHeading.textContent = 'NEWS';
+  }
+
   const menuButton = document.querySelector('.sp-menu-button');
   const modalMenu = document.getElementById('modal-menu');
   const modalCloseBtn = document.querySelector('.modal-close-btn');

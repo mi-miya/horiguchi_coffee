@@ -93,6 +93,7 @@
 .lineup h2 {
   padding: 40px 0 10px;
   font-size: 1.2em;
+  font-weight: 400;
   text-align: center;
   border-top: 1px solid #220000;
   border-bottom: 1px solid #220000;
@@ -360,7 +361,9 @@
 ======================================== */
 .approach-item-image-full {
   width: 100%;
-  height: auto;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -378,6 +381,7 @@
   line-height: 1.6;
   margin-bottom: 20px;
   letter-spacing: 0.02em;
+  font-weight: 600;
 }
 
 .approach-content {
@@ -654,9 +658,8 @@
 
   .approach-item-image-full {
     margin-bottom: 44px;
-    max-width: 1080px;
+    height: 600px;
     margin: 0 auto;
-    max-height: 880px;
   }
 
   .approach-container {
